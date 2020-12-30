@@ -33,7 +33,13 @@ methods: {
   navigateToHome(){
     this.$router.push('/')
   }
-}
+},
+  beforeRouteEnter(to,form,next){
+  next(true);
+  },
+  beforeRouteLeave(to,from,next){
+  next(true);
+  }
 }
 </script>
 
