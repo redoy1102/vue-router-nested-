@@ -6,6 +6,11 @@ import compCustomerEdit from './components/Customer/CustomerEdit'
 import compCustomerStart from './components/Customer/CustomerStart'
 export const routes = [
     {
+        path:'*',
+        component: compHome
+
+    },
+    {
         path: '',
         component: compHome
     },
@@ -27,5 +32,6 @@ export const routes = [
                 component: compCustomerEdit
             },
         ]
-    }
+    },
+
 ]

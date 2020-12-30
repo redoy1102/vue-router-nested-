@@ -8,7 +8,15 @@ Vue.config.productionTip = false
 
 const router = new VueRouter({
   routes,
-  mode: 'history'
+  mode: 'history',
+  scrollBehavior(to,from){
+    console.log(from);
+    console.log(to)
+    return{
+      x: 0,
+      y: 0
+    }
+  }
 })
 new Vue({
   render: h => h(App),
