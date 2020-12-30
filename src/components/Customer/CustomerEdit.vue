@@ -1,5 +1,7 @@
 <template>
-<div></div>
+<div>
+  <h1>Hey i am customer edit</h1>
+</div>
 </template>
 
 <script>

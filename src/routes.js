@@ -12,18 +12,20 @@ export const routes = [
 
     {
         path: '/customer',
-        component: compCustomer
-    },
-    {
-        path: '/customerDetail',
-        component: compCustomerDetail
-    },
-    {
-        path: '/customerEdit',
-        component: compCustomerEdit
-    },
-    {
-        path: '/customerStart',
-        component: compCustomerStart
+        component: compCustomer,
+        children: [
+            {
+                path: '',
+                component: compCustomerStart
+            },
+            {
+                path: ':id',
+                component: compCustomerDetail
+            },
+            {
+                path: ':id/edit',
+                component: compCustomerEdit
+            },
+        ]
     }
 ]
